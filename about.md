@@ -10,8 +10,7 @@ I spent five years working on software for Union Pacific Railroad. I was a part 
 
 I spent a brief stint at Rain and Hail Insurance working on a document processing workflow system. I did not feel challenged there and didn't stay long.
 
-Now I'm with Source Allies and really enjoying it. I'm at a client who has some really challenging problems.
-
+Now I'm with Source Allies and really enjoying it. I'm at a client who has some really challenging problems. My team is made up of awesome developers and awesome people.
 
 This blog was build with Jekyll, I encourage you to check it out. It's pretty awesome!
 https://jekyllrb.com/
