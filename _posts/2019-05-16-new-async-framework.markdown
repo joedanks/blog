@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "New Async Java Framework"
+date:   2019-05-16 21:00:00 -0600
+categories: tech
+---
+Earlier this year my Tech Lead wanted the team to try out an async library on our new project. It is a fun little library called [Reactor](https://projectreactor.io/). It is a non blocking io asynchronous library. The project we are working on has a moderate amount of io so Reactor sounded like a good choice.
+
+The two of us sat down and paired up on the first story to incorporate Reactor. We explored the framework together. I am really impressed with the framework. It has been performing awesomely. Spring Boot has integrated with Reactor and provided [WebClient](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-webclient.html). Which is pretty awesome.
+
+So Reactor sets up streams to move data through. It is also lazy and doesn't actually do anything until something subscribes to the stream. The streams are a mix of push/pull. The end subscriber with make a request to the next level up to say it wants some data. If that layer has any actively available it will then send it down to the subscriber. Otherwise, it will request to the next layer up for more data. And so on and so forth. The reason it is a push and pull system is that lower levels inform upper levels that they are making a request. The request is not satisfied during that call. It is up to the upper levels to call the `onNext(data)` method of the lower levels. There are some really peculiar scenarios you can get into with this type of system. 
+
+We had a use case where we wanted to add a buffer, `.bufferTimeout()`, to allow the lower layers to group data into fewer executions. The lower layers also were somewhat slow because they were making HTTP requests and we intentionally throttled them way back to not impact the recipient of the request. But the upper layers were pulling work from a queue. After a short amount of time, the stream would crash. The buffer timeout has some unique behavior where after the timeout period it tries to call `.onNext()` but there are no current requests because the lower levels are still busy handling earlier HTTP requests. There current implementation of the buffer timeout throws an exception when this occurs. This was a little annoying but our use case of throttling the lower levels goes against what Reactor wants to do. So we implemented our own buffer timeout to handle the situation. That was quite the endeavor on its own.
