@@ -1,0 +1,21 @@
+---
+layout: post
+title: "Just a simple React page"
+date: 2019-12-16 12:00:00 -0600
+categories: tech
+---
+
+I've had aspirations to put together a short sweet simple page to help me track time for work. At my client, I was required to use a time tracking system specified certain times. When I got in the office, when I left for lunch, when I got back from lunch, and when I left for the day. It would then calculate your hours for the day from that. It was slightly a pain, but I got used to it and would eventually just try adjusting my time out to hit my hours so I didn't have to do the math in my head. Well, we got moved off of that system. The new one is really easy as I only have to input hours for a given day. I will usually flex an hour here or there to get me out of the office early one day. I also personally prefer to have my time tracking reflect reality. So here I am using NotePad++ to track my time in, lunch, and time out. Real cool. I had full intentions to practice some React and build a simple webpage to help me track this and do the math for me. (I really dislike simple mental math)
+
+## Generating a project
+I have used create-react-app before and it was really easy, so I wanted to use it again for this. Well I needed to upgrade node, which was pretty easy (nvm FTW!). Then tried using the new to me `npx` command. I don't remember exactly what went wrong, but I know it didn't work the first time. And then I'm pretty sure I generated my project multiple times. I distinctly remember spending about 4 hours getting everything updated and project generated and committed to github. I will also admit I was casually watching some Bob's Burgers during all of this, which didn't help my focus.
+
+## Building the code
+Two months after generating the code, I decided to pick it back up and work on actually implementing it. Now my React skill get rusty pretty quickly. I think it has only been a few months since the last React project I worked on for my client. I at least could remember the syntax to look up the documentation and brush up on functionality. So the first hour was a refresher on React docs. Then I got the crazy idea to use TypeScript. The migration was super easy and straight-forward. Next was more time for a crash course on TypeScript and how it is usually used with React. I still went pretty quick after bringing in TypeScript. Overall I think it took about 4 hours to implement the code.
+
+## Hosting
+I of course wanted to use github pages to host this project. I did some quick googling and found the gh-pages library. Pulled it in and got my branch deployed! I already have this project set up as my user github pages project. I knew the project github pages are supposed to be hosted with repository name as the path. So I tried https://joedanks.github.io/time-log and got a 404... Now I was confused as everything was just supposed to work. Eventually dug through the settings on the repo and it gave me the link to the github pages (look below). I think I understand why it was giving a 404 without the '/', but that doesn't make me feel any better.
+
+https://joedanks.github.io/time-log/
+
+So next week I'll give this a try and see what changes I want to make.
