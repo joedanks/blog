@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-My name is Joe Danks. First and foremost, I'm a father to an amazing baby girl, Adelaide. Next, I'm a husband to my awesome wife, Emily. Finally, I'm a software developer who enjoys a challenge.
+My name is Joe Danks. First and foremost, I'm a father to two amazing girls, Adelaide and Delilah. Next, I'm a husband to my awesome wife, Emily. Finally, I'm a software developer who enjoys a challenge.
 
 I spent five years working on software for Union Pacific Railroad. I was a part of building a business rules management system (BRMS) and designing rule engines for domain needs. I also spent some time working on the Terminal Management tool for tracking equipment and work inside a train yard.
 
